@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { BiSearchAlt2 } from 'react-icons/bi'
-import Loading from './Loading'
-import Searchbar from './SearchBar'
-import RecipeCard from './RecipeCard'
-import { fetchRecipes } from '../utils'
-import Button from './Button'
+import React, { useEffect, useState } from 'react';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import Loading from './Loading';
+import Searchbar from './SearchBar';
+import RecipeCard from './RecipeCard';
+import { fetchRecipes } from '../utils/fetchRecipes';
+import Button from './Button';
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState([])
@@ -12,7 +12,7 @@ const Recipes = () => {
     const [limit, setLimit] = useState(30)
     const [loading, setLaoding] = useState(false)
 
-    const handleChange = (e) => {
+    const handleChange = (e) => { 
         setQuery(e.target.value)
     }
 
