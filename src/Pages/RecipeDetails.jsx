@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { fetchRecipe, fetchRecipes } from '../utils/fetchRecipes'
-import Loading from '../Components/Loading'
-import Header from '../Components/Header'
-import { AiFillPushpin } from "react-icons/ai"
-import { BsPatchCheck } from "react-icons/bs"
-import RecipeCard from '../Components/RecipeCard'
-
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { fetchRecipe, fetchRecipes } from '../utils/fetchRecipes';
+import Loading from '../Components/Loading';
+import Header from '../Components/Header';
+import { AiFillPushpin } from "react-icons/ai";
+import { BsPatchCheck } from "react-icons/bs";
+import RecipeCard from '../Components/RecipeCard';
+ 
 const RecipeDetail = () => {
   const [recipe, setRecipe] = useState(null)
   const [recipes, setRecipes] = useState([])
@@ -18,9 +18,9 @@ const RecipeDetail = () => {
     try {
       setLoading(true)
 
-      const data = await fetchRecipe(id);
+      const data = await fetchRecipe(id)
 
-      setRecipe(data);
+      setRecipe(data)
 
       const recommend = await fetchRecipes({ query: recipe?.label, limit: 5 })
 
@@ -140,4 +140,4 @@ const RecipeDetail = () => {
   )
 }
 
-export default RecipeDetail;
+export default RecipeDetail

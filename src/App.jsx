@@ -2,8 +2,8 @@ import {Routes, Route, Outlet} from 'react-router-dom'
 import Home from './Pages/Home';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
-import RecipeDetail from './Components/RecipeDetails';
 import './App.css';
+import RecipeDetails from './Pages/RecipeDetails';
 
 function Layout(){
   return (
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='recipes/:id' element={<RecipeDetail />} />
+          <Route path='recipes/:id' element={<RecipeDetails />} />
         </Route>
       </Routes>
     </div>
