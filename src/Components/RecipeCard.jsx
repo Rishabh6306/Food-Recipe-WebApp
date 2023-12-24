@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const RecipeCard = ({ recipe }) => {
-    const { image, label, cuisineType, dietLabel, mealType, uri } = recipe?.recipe
+    const { image, label, cuisineType, mealType, uri } = recipe?.recipe
 
     const id = uri?.split("#")[1]
 

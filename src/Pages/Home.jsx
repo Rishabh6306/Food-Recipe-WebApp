@@ -8,8 +8,8 @@ const Home = () => {
       <Header
         title={
           <p>
-            Taste the World with
-            <br /> FlavorVerse!
+            Explore the World of
+            <br /> FlavorHub!
           </p>
         }
         type='home'

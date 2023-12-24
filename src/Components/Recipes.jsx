@@ -12,7 +12,7 @@ const Recipes = () => {
     const [limit, setLimit] = useState(30)
     const [loading, setLaoding] = useState(false)
 
-    const handleChange = (e) => { 
+    const handleChange = (e) => {
         setQuery(e.target.value)
     }
 
